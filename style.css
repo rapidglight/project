@@ -1,5 +1,5 @@
 body {
-    background: #767680;
+    background: #000;
     font-size: 15pt;
     margin-top: 20px;
 }
@@ -117,9 +117,9 @@ body {
     top: 0; /* 元素頂部距離視窗頂部的距離為0 */
     /*left: -100%;*/ /* 左側距離視窗左側的距離為-100% (在這裡註解掉，表示不使用左側定位) */
     right: -100%; /* 右側距離視窗右側的距離為-100% (元素初始時位於視窗外右側) */
-    height: 100%; /* 元素的高度佔滿整個視窗高度 */
-    width: 100%; /* 元素的寬度佔滿整個視窗寬度 */
-    background: #000; /* 元素的背景顏色為黑色 */
+    height: 60%; /* 元素的高度佔滿整個視窗高度 */
+    width: 20%; /* 元素的寬度佔滿整個視窗寬度 */
+    background: #323030b3; /* 元素的背景顏色為黑色 */
     /*background: linear-gradient(90deg, #f92c78, #4114a1);*/ /* 使用漸層背景色 */
     /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */ /* 使用漸層背景色 */
    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/ /* 使用漸層背景色 */
@@ -133,7 +133,7 @@ body {
 .menu-btn{
     position: absolute; /* 絕對定位，相對於其最接近的非 static（靜態）定位的父元素或根元素 */
     z-index: 2; /* 元素的堆疊順序，數字越大越在上層 */
-    right: 20px; /* 元素右側與其包含塊右側的距離為20px */
+    right: 10px; /* 元素右側與其包含塊右側的距離為20px */
     /*left: 20px; */ /* 元素左側與其包含塊左側的距離為20px (在這裡註解掉，表示不使用左側定位) */
     top: 20px; /* 元素頂部與其包含塊頂部的距離為20px */
     height: 60px; /* 元素的高度為50px */
@@ -157,7 +157,7 @@ body {
     top: calc(50% - 1px); /* 元素頂部與其包含塊頂部的距離為垂直居中（50%）減去元素高度的一半（1px） */
     left: 30%; /* 元素左側與其包含塊左側的距離為30% */
     width: 40%; /* 元素的寬度為包含塊寬度的40% */
-    border-bottom: 2px solid #000; /* 底部邊框為2px實線，顏色為黑色 */
+    border-bottom: 2px solid #ffffff; /* 底部邊框為2px實線，顏色為黑色 */
     transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1); /* 轉場效果設定，讓變化有流暢的過渡效果，使用 cubic-bezier 函數指定轉場速度曲線 */
 }
 .menu-btn:before {
@@ -188,8 +188,8 @@ body {
 }
 .wrapper ul {
     position: absolute;
-    top: 60%;
-    left: 50%;
+    top: 45%;
+    left: 30%;
     height: 90%;
     transform: translate(-50%, -50%); /* 將元素水平及垂直居中 */
     list-style: none;
