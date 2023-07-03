@@ -281,3 +281,5 @@ input[type="checkbox"] {
     transition-delay: .6s;  /* 設定連結文字的過渡延遲時間為 0.6 秒 */
     transform: translateX(-100px);  /* 將連結文字在X軸方向上向左位移 100 像素 */
 }
+
+
