@@ -1,0 +1,189 @@
+.menu {
+    position: relative;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 10px; /* 距離頂部的距離 */
+    right: 10px; /* 距離右側的距離 */
+}
+/* 右邊首頁欄位Ｍenu */
+＊{
+    margin: 0; /* 元素的外邊距設為0 */
+    padding: 0; /* 元素的內邊距設為0 */
+    box-sizing: border-box; /* 設定元素的盒模型為邊框盒模型 */
+    font-family: 'Lato', sans-serif; /* 設定字體為Lato字體，如果不支援Lato字體，則使用sans-serif字體 */
+    font-family: 'Oswald', sans-serif; /* 設定字體為Oswald字體，如果不支援Oswald字體，則使用sans-serif字體 */
+}
+.wrapper{
+    position: fixed; /* 固定定位，使元素相對於視窗保持固定位置 */
+    top: 0; /* 元素頂部距離視窗頂部的距離為0 */
+    /*left: -100%;*/ /* 左側距離視窗左側的距離為-100% (在這裡註解掉，表示不使用左側定位) */
+    right: -100%; /* 右側距離視窗右側的距離為-100% (元素初始時位於視窗外右側) */
+    height: 50%; /* 元素的高度佔滿整個視窗高度 */
+    width: 17%; /* 元素的寬度佔滿整個視窗寬度 */
+    background: #323030b3; /* 元素的背景顏色為黑色 */
+    /*background: linear-gradient(90deg, #f92c78, #4114a1);*/ /* 使用漸層背景色 */
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */ /* 使用漸層背景色 */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/ /* 使用漸層背景色 */
+    transition: all 0.6s ease-in-out; /* 轉場效果設定，讓變化有流暢的過渡效果 */
+}
+#active:checked ~ .wrapper{
+    /*left: 0;*/
+    right:0;
+}
+.menu-btn{
+    position: absolute; /* 絕對定位，相對於其最接近的非 static（靜態）定位的父元素或根元素 */
+    z-index: 9999; /* 元素的堆疊順序，數字越大越在上層 */
+    right: 10px; /* 元素右側與其包含塊右側的距離為20px */
+    /*left: 20px; */ /* 元素左側與其包含塊左側的距離為20px (在這裡註解掉，表示不使用左側定位) */
+    top: 20px; /* 元素頂部與其包含塊頂部的距離為20px */
+    height: 60px; /* 元素的高度為50px */
+    width: 60px; /* 元素的寬度為50px */
+    text-align: center; /* 文字在元素中水平居中對齊 */
+    line-height: 50px; /* 行高與元素高度相同，使文字垂直居中對齊 */
+    border-radius: 50%; /* 元素的圓角半徑為50% (形成圓形元素) */
+    font-size: 20px; /* 文字的字體大小為20px */
+    cursor: pointer; /* 鼠標懸停在元素上時顯示為手型指針 */
+    /*color: #fff;*/ /* 文字的顏色為白色 */
+    /*background: linear-gradient(90deg, #f92c78, #4114a1);*/ /* 使用漸層背景色 */
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */ /* 使用漸層背景色 */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */ /* 使用漸層背景色 */
+    transition: all 0.3s ease-in-out; /* 轉場效果設定，讓變化有流暢的過渡效果 */
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after {
+    content: ""; /* 空內容 */
+    position: absolute; /* 絕對定位 */
+    top: calc(50% - 1px); /* 元素頂部與其包含塊頂部的距離為垂直居中（50%）減去元素高度的一半（1px） */
+    left: 30%; /* 元素左側與其包含塊左側的距離為30% */
+    width: 40%; /* 元素的寬度為包含塊寬度的40% */
+    border-bottom: 2px solid #ffffff; /* 底部邊框為2px實線，顏色為黑色 */
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1); /* 轉場效果設定，讓變化有流暢的過渡效果，使用 cubic-bezier 函數指定轉場速度曲線 */
+}
+.menu-btn:before {
+    transform: translateY(-8px); /* 將元素向上平移8px */
+}
+.menu-btn:after {
+    transform: translateY(8px); /* 將元素向下平移8px */
+}
+.close {
+    z-index: 1; /* 元素的堆疊順序為1，位於其他元素之上 */
+    width: 100%; /* 元素的寬度為100% */
+    height: 100%; /* 元素的高度為100% */
+    pointer-events: none; /* 不接受滑鼠事件，事件將透過該元素傳遞到下一層元素 */
+    transition: background .6s; /* 在0.6秒內進行背景色的過渡效果 */
+}
+/* closing animation */
+#active:checked + .menu-btn span {
+    transform: scaleX(0); /* 將 .menu-btn 元素下的 span 子元素的水平方向縮放為0，使其不可見 */
+}
+#active:checked + .menu-btn:before {
+    transform: rotate(45deg); /* 將 .menu-btn 元素下的 before 偽元素旋轉45度 */
+    border-color: #fff; /* 設定邊框顏色為白色 */
+}
+
+#active:checked + .menu-btn:after {
+    transform: rotate(-45deg); /* 將 .menu-btn 元素下的 after 偽元素旋轉-45度 */
+    border-color: #fff; /* 設定邊框顏色為白色 */
+}
+.wrapper ul {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    height: 90%;
+    transform: translate(-50%, -50%); /* 將元素水平及垂直居中 */
+    list-style: none;
+    text-align: center;
+}
+
+.wrapper ul li {
+    height: 10%;
+    margin: 15px 0; /* 上下間距為15像素，左右間距為0 */
+}
+
+.wrapper ul li a {
+    text-decoration: none;    /* 移除連結的下劃線 */
+    font-size: 30px;          /* 設定連結文字的字型大小為30像素 */
+    font-weight: 500;         /* 設定連結文字的字重為500 */
+    padding: 5px 30px;        /* 設定連結文字的內部填充為5像素（上下）和30像素（左右） */
+    color: #fff;              /* 設定連結文字的顏色為白色 */
+    border-radius: 50px;      /* 設定連結文字的邊框半徑為50像素，使其呈現圓形外觀 */
+    position: absolute;       /* 將連結文字設定為絕對定位 */
+    line-height: 30px;        /* 設定連結文字的行高為50像素，使其垂直居中對齊 */
+    margin: 5px 30px;         /* 設定連結文字的外部間距為5像素（上下）和30像素（左右） */
+    opacity: 0;               /* 將連結文字的透明度設定為0，使其隱藏 */
+    transform: rotate(90deg);
+    white-space: nowrap;
+    transition: all 0.3s ease;  /* 設定連結文字的所有屬性在0.3秒內以緩動的方式過渡變化 */
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);  /* 設定連結文字的 transform 屬性在0.6秒內以自訂的貝茲曲線方式過渡變化 */
+}
+.wrapper ul li a:after {
+    position: absolute;       /* 將偽元素設定為絕對定位 */
+    content: "";              /* 設定偽元素的內容為空 */
+    background: #fff;         /* 設定偽元素的背景顏色為白色 */
+    /* background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0); */
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    width: 100%;              /* 設定偽元素的寬度為100% */
+    height: 100%;             /* 設定偽元素的高度為100% */
+    left: 0;                  /* 將偽元素的左偏移量設定為0 */
+    top: 0;                   /* 將偽元素的上偏移量設定為0 */
+    border-radius: 50px;      /* 設定偽元素的邊框半徑為50像素，使其呈現圓形外觀 */
+    transform: scaleY(0);     /* 將偽元素沿Y軸方向縮放為0，使其在初始狀態下不可見 */
+    z-index: -1;              /* 將偽元素的堆疊順序設定為-1，使其位於連結文字之下 */
+    transition: transform 0.3s ease;  /* 設定偽元素的 transform 屬性在0.3秒內以緩動的方式過渡變化 */
+}
+.wrapper ul li a:hover:after {
+    transform: scaleY(1);  /* 當滑鼠懸停於連結文字時，偽元素 scaleY 屬性變為 1，將其在Y軸方向上縮放為原始大小 */
+}
+
+.wrapper ul li a:hover {
+    color: #1a73e8;  /* 當滑鼠懸停於連結文字時，設定文字顏色為 #1a73e8 */
+}
+
+input[type="checkbox"] {
+    display: none;  /* 隱藏所有類型為 checkbox 的輸入框 */
+}
+
+.content {
+    position: absolute;  /* 將內容元素設定為絕對定位 */
+    top: 50%;  /* 將內容元素相對於其容器的頂部位置設定為垂直居中 */
+    left: 50%;  /* 將內容元素相對於其容器的左側位置設定為水平居中 */
+    transform: translate(-50%, -50%);  /* 使用 translate 函式將內容元素往左上方移動50%，以實現水平垂直居中 */
+    z-index: -1;  /* 將內容元素的堆疊順序設定為-1，使其位於其他元素之下 */
+    text-align: center;  /* 將內容元素的文字居中對齊 */
+    width: 100%;  /* 將內容元素的寬度設定為100% */
+    color: #202020;  /* 設定內容元素的文字顏色為 #202020 */
+}
+
+.content .title {
+    font-size: 40px;  /* 設定標題文字的字型大小為 40 像素 */
+    font-weight: 700;  /* 設定標題文字的字型粗細為 700 (粗體) */
+}
+
+.content p {
+    font-size: 35px;  /* 設定段落文字的字型大小為 35 像素 */
+    font-weight: 600;  /* 設定段落文字的字型粗細為 600 (中粗) */
+}
+
+#active:checked ~ .wrapper ul li a {
+    opacity: 1;  /* 當 id 為 active 的 checkbox 被勾選時，使連結文字的不透明度為 1 (完全不透明) */
+}
+
+.wrapper ul li a {
+    transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);  /* 設定連結文字的過渡效果，包括不透明度和位移 */
+    transform: translateX(100px);  /* 將連結文字在X軸方向上向右位移 100 像素 */
+}
+
+#active:checked ~ .wrapper ul li a {
+    transform: none;  /* 當 id 為 active 的 checkbox 被勾選時，將連結文字的位移還原為原始位置 */
+    transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1);  /* 設定連結文字的過渡時間函數，其中包括 ease 和 cubic-bezier(.1,1.3,.3,1) */
+    transition-delay: .6s;  /* 設定連結文字的過渡延遲時間為 0.6 秒 */
+    transform: translateX(-100px);  /* 將連結文字在X軸方向上向左位移 100 像素 */
+}
+
+
