@@ -10,8 +10,9 @@ html {
 	width: 100%;
 }
 .container {
-	padding-bottom: 3rem;
+	padding-bottom: 4rem;
 }
+
 img {
 	-webkit-box-reflect: below 5px
 		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));

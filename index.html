@@ -15,7 +15,15 @@
 <body>
 <div class="all">
     <header id="header1">
-        <p>這裡我要放ＬＯＧＯ還有搜尋欄</p>
+        
+        
+        <form onsubmit="event.preventDefault();" role="search">
+            <label for="search">LOGO and 搜尋</label>
+            <input id="search" type="search" placeholder="Search..." autofocus required />
+            <button type="submit">Go</button>    
+          </form>         
+        
+
         <input type="checkbox" id="active">
     <label for="active" class="menu-btn"><span></span></label>
     <label for="active" class="close"></label>
@@ -32,11 +40,18 @@
     </header>
     <div id="content">
         <nav id="nav1">
+                   
+            
+                          
+                  
+            
+            
             這邊可以放一些搜尋
         </nav>
         <article id="article1">
     <p>
-    中間會放一些 相關電影的導引頁面
+    中間會放一些 電影的導引頁面
+    
     </p>
     </article>
     <aside id="aside1">這邊放一些預設排行榜</aside>
