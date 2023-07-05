@@ -33,10 +33,12 @@ body {
 }
 #content {
     min-height: 150px;
-    margin: 0px;
+    margin-left: 20px;
+    margin-right: 50px;
     padding: 0px;
     display: flex;
     flex-direction:row;
+    justify-content: space-between;
 }
 
 #content nav {
@@ -105,8 +107,8 @@ body {
     padding: 5px;
     border: 1px solid #ffffff;
     border-radius: 10px;
-    background: #000;
-    ;
+    background: #302e2e;
+    display: flex;
 }
 #div3{
     margin: 10px;
@@ -159,11 +161,10 @@ body {
 }
 #divrating{
     border: 0px solid #fff;
-    display: flex;
+    
 }
 #div2rating{
     border: 0px solid #fff;
-    display: flex;
 }
 #description{
     border: 0px solid #fff;
