@@ -29,7 +29,7 @@ body {
     text-align: center; /* 对齐文本水平居中 */
 }
 #moviedata{
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
 }
 #content {
     min-height: 150px;
@@ -54,7 +54,7 @@ body {
 #content article {
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #000;
     flex-basis: 80%; 
@@ -64,7 +64,7 @@ body {
 #content aside {
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #000;
     flex-basis: 20%;
@@ -75,7 +75,7 @@ body {
     display: block;
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     min-height: 50px;
     border-radius: 10px;
     background: #000;
@@ -97,7 +97,7 @@ body {
 #div1{
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #000;
     flex-basis: 20%;
@@ -105,7 +105,7 @@ body {
 #div2{
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #302e2e;
     display: flex;
@@ -113,14 +113,14 @@ body {
 #div3{
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #000;
 }
 #div4{
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #000;
     flex-basis: 20%;
@@ -129,7 +129,7 @@ body {
 #div5{
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     background: #000;
 }
