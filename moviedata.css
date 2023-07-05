@@ -99,7 +99,6 @@ body {
     border-radius: 10px;
     background: #000;
     flex-basis: 20%;
-    order: 1;
 }
 #div2{
     margin: 10px;
@@ -107,8 +106,6 @@ body {
     border: 1px solid #ffffff;
     border-radius: 10px;
     background: #000;
-    flex-basis: 80%;
-    order: 2;
 }
 #div3{
     margin: 10px;
@@ -116,8 +113,6 @@ body {
     border: 1px solid #ffffff;
     border-radius: 10px;
     background: #000;
-    flex-basis: 20%;
-    order: 3;
 }
 #div4{
     margin: 10px;
@@ -127,7 +122,6 @@ body {
     background: #000;
     flex-basis: 20%;
     display: flex;
-    order: 4;
 }
 #div5{
     margin: 10px;
@@ -135,49 +129,47 @@ body {
     border: 1px solid #ffffff;
     border-radius: 10px;
     background: #000;
-    flex-basis: 20%;
-    order: 5;
 }
 #titlename{
     margin: 1px;
     padding: 1px;
-    border: 1px solid #fff;
+    border: 0px solid #fff;
     font-size: 35px;
 }
 #year{
     padding-left: 5px;
     padding-top: 20px;
     font-size: 16px ;
-    border: 1px solid #fff;
+    border: 0px solid #fff;
 }
 #logorating{
     margin: 20px;
     padding: 20px;
-    border: 1px solid #fff;
+    border: 0px solid #fff;
     flex-basis: 50%;
     order: 1;
 }
 #rating{
     margin: 20px;
     padding: 20px;
-    border: 1px solid #fff;
+    border: 0px solid #fff;
     flex-basis: 50%;
     order: 2;
 }
 #divrating{
-    border: 1px solid #fff;
+    border: 0px solid #fff;
     display: flex;
 }
 #div2rating{
-    border: 1px solid #fff;
+    border: 0px solid #fff;
     display: flex;
 }
 #description{
-    border: 1px solid #fff;
+    border: 0px solid #fff;
 }
 #director{
-    border: 1px solid #fff;
+    border: 0px solid #fff;
 }
 #cast{
-    border: 1px solid #fff;
+    border: 0px solid #fff;
 }
